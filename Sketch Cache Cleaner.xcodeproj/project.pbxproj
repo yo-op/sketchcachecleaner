@@ -321,7 +321,7 @@
 				DEVELOPMENT_TEAM = GW82A8W73Z;
 				INFOPLIST_FILE = "Sketch Cache Cleaner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.minikin.Sketch-Cache-Cleaner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sketch Cache Cleaner/Utils/Sketch Cache Cleaner-Bridging-Header.h";
@@ -339,7 +339,7 @@
 				DEVELOPMENT_TEAM = GW82A8W73Z;
 				INFOPLIST_FILE = "Sketch Cache Cleaner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.minikin.Sketch-Cache-Cleaner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sketch Cache Cleaner/Utils/Sketch Cache Cleaner-Bridging-Header.h";

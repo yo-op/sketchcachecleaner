@@ -94,7 +94,9 @@ class ViewController: NSViewController {
     let stringArray = outputString?.components(separatedBy: "/")
     guard let stringToDispaly = stringArray?[0] else { return }
     
-    if stringToDispaly.trim() == "0B" {
+    print("stringToDispaly", stringToDispaly)
+    
+    if stringToDispaly.trim() == "0B" || stringToDispaly == "" {
       finalUIState()
     } else {
       stringToTest = "Clear \(stringToDispaly.trim())B"

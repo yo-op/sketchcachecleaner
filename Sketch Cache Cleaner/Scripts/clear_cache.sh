@@ -6,6 +6,6 @@
 #  Created by Sasha Prokhorenko on 2/6/17.
 #  Copyright © 2017 Sasha Prokhorenko. All rights reserved.
 
-rm -rf /.DocumentRevisions-V100/{*,.*}
+rm -rf /.DocumentRevisions-V100/.cs/{*,.*}
 
 exit 5

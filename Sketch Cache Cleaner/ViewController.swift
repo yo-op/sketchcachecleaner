@@ -93,7 +93,8 @@ class ViewController: NSViewController {
     let outputString = String(data: outputData!, encoding: .utf8)
     let stringArray = outputString?.components(separatedBy: "/")
     guard let stringToDispaly = stringArray?[0] else { return }
-    if stringToDispaly == "" {
+    
+    if stringToDispaly.trim() == "0B" {
       finalUIState()
     } else {
       stringToTest = "Clear \(stringToDispaly.trim())B"

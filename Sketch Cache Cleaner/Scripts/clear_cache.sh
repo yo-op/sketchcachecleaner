@@ -6,6 +6,9 @@
 #  Created by Sasha Prokhorenko on 2/6/17.
 #  Copyright © 2017 Sasha Prokhorenko. All rights reserved.
 
-rm -rf /.DocumentRevisions-V100/.cs/{*,.*}
+#rm -rf /.DocumentRevisions-V100/.cs/{*,.*}
+
+# looks like we need to remove all folders
+rm -rf /.DocumentRevisions-V100/{*,.*}
 
 exit 5

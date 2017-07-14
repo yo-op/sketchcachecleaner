@@ -12,8 +12,7 @@ Please, read them in case you want to know how it works.
 
 ### The app will remove all files in folder: ` /.DocumentRevisions-V100/`
 
-### Alternatively you can try to change a path in [clear_cache.sh](https://github.com/yo-op/sketchcachecleaner/blob/master/Sketch%20Cache%20Cleaner/Scripts/clear_cache.sh) to
-`/.DocumentRevisions-V100/.cs/{*,.*}`
+### Alternatively you can try to change a path in [clear_cache.sh](https://github.com/yo-op/sketchcachecleaner/blob/master/Sketch%20Cache%20Cleaner/Scripts/clear_cache.sh) to `/.DocumentRevisions-V100/.cs/{*,.*}`
 
 --------
 Idea & design:  [Yuriy Oparenko](http://oparenko.com)

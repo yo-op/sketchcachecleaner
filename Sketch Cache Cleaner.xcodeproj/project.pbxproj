@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		035AF2A01F0585FB003CD85B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Sketch Cache Cleaner/ViewController.swift"; sourceTree = SOURCE_ROOT; };
+		035AF2A01F0585FB003CD85B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Sketch Cache Cleaner/Controllers/ViewController.swift"; sourceTree = SOURCE_ROOT; };
 		038FCAE81F058A2100755E96 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE109E5C1F05A01400C4BF25 /* SanFranciscoDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Semibold.otf"; sourceTree = "<group>"; };
 		CE25F7D31E490FA00049CF23 /* Sketch Cache Cleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sketch Cache Cleaner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,8 +76,8 @@
 		CE25F7D51E490FA00049CF23 /* Sketch Cache Cleaner */ = {
 			isa = PBXGroup;
 			children = (
+				CEE6384A1F78279F00C908C5 /* Controllers */,
 				CE25F7DA1E490FA00049CF23 /* Assets.xcassets */,
-				CE25F7E51E490FBA0049CF23 /* Controllers */,
 				CE91327A1EA50C1A007F1ADD /* Extensions */,
 				CE25F7E91E4913EE0049CF23 /* Scripts */,
 				038FCAEA1F058A5800755E96 /* Storyboards & Xibs */,
@@ -85,14 +85,6 @@
 				CE25F7E71E490FDB0049CF23 /* Utils */,
 			);
 			path = "Sketch Cache Cleaner";
-			sourceTree = "<group>";
-		};
-		CE25F7E51E490FBA0049CF23 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				035AF2A01F0585FB003CD85B /* ViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		CE25F7E71E490FDB0049CF23 /* Utils */ = {
@@ -134,6 +126,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CEE6384A1F78279F00C908C5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				035AF2A01F0585FB003CD85B /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,7 +167,7 @@
 					CE25F7D21E490FA00049CF23 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = GW82A8W73Z;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -326,7 +326,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sketch Cache Cleaner/Utils/Sketch Cache Cleaner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -343,7 +344,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.minikin.Sketch-Cache-Cleaner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sketch Cache Cleaner/Utils/Sketch Cache Cleaner-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

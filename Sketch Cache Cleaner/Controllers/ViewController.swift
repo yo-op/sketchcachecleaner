@@ -150,10 +150,11 @@ class ViewController: NSViewController {
       return
     }
     
-    let attributes = [NSForegroundColorAttributeName: textColor,
-                      NSFontAttributeName: font,
-                      NSParagraphStyleAttributeName: style] as [String : Any]
+    let attributes = [NSAttributedStringKey.foregroundColor: textColor,
+                      NSAttributedStringKey.font: font,
+                      NSAttributedStringKey.paragraphStyle: style] as [NSAttributedStringKey : Any]
     
     button.attributedTitle = NSAttributedString(string: title, attributes: attributes)
+      //NSAttributedString(string: title, attributes: attributes)
   }
 }

@@ -6,9 +6,9 @@ Sketch Cache Cleaner is an app that deletes hidden Sketch history files that can
 
 ## Requirements
 
-To build manually you need:
-
-Xcode 8.3.3
+- macOS 10.10+
+- Xcode 9.0+
+- Swift 4.0+
 
 ## References
 
@@ -23,6 +23,10 @@ Please, read them in case you want to know how it works.
 ### If your workflow relies on automatic versioning by macOS (Time Machine etc.) - DO NOT USE THIS APP!
 ### The app will remove all files in folder: ` /.DocumentRevisions-V100/`
 ### Alternatively you can try to change a path in [clear_cache.sh](https://github.com/yo-op/sketchcachecleaner/blob/master/Sketch%20Cache%20Cleaner/Scripts/clear_cache.sh) to `/.DocumentRevisions-V100/.cs/{*,.*}`
+
+## License
+
+Sketch Cache Cleaner is released under the MIT license. [See LICENSE](https://github.com/yo-op/sketchcachecleaner/blob/master/LICENSE.md) for details.
 
 --------
 Idea & design:  [Yuriy Oparenko](http://oparenko.com)

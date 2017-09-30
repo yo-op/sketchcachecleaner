@@ -24,6 +24,11 @@ Please, read them in case you want to know how it works.
 ### The app will remove all files in folder: ` /.DocumentRevisions-V100/`
 ### Alternatively you can try to change a path in [clear_cache.sh](https://github.com/yo-op/sketchcachecleaner/blob/master/Sketch%20Cache%20Cleaner/Scripts/clear_cache.sh) to `/.DocumentRevisions-V100/.cs/{*,.*}`
 
+## Tips
+
+1. Use this app wisely.
+2. Reboot your Mac after app use.
+
 ## License
 
 Sketch Cache Cleaner is released under the MIT license. [See LICENSE](https://github.com/yo-op/sketchcachecleaner/blob/master/LICENSE.md) for details.

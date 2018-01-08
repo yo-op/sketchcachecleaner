@@ -1,5 +1,8 @@
 # Sketch Cache Cleaner
 
+[![Build Status](https://travis-ci.org/yo-op/sketchcachecleaner.svg?branch=master)](https://travis-ci.org/yo-op/sketchcachecleaner)
+[![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](https://github.com/yo-op/sketchcachecleaner)
+
 ![Sketch Cache Cleaner](https://image.ibb.co/mHOoea/cleaner.png)
 
 Sketch Cache Cleaner is an app that deletes hidden Sketch history files that can take a lot of space on your hard drive and that you would probably never use.

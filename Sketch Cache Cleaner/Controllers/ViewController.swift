@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+final class ViewController: NSViewController {
   
   // MARK: - Properties
   @IBOutlet var backgroundView: NSView!
@@ -39,15 +39,15 @@ class ViewController: NSViewController {
     view.window?.backgroundColor = NSColor(red:0.07, green:0.04, blue:0.20, alpha:1.00)
     view.window?.contentView?.setFrameSize(CGSize(width: (view.window?.contentView?.frame.width)!,
                                                   height: (view.window?.contentView?.frame.height)! + 20))
-    setButton(button, title: "Enable and Scan")
+    NSButton.setButton(button, title: ButtonText.enableAndScan)
   }
   
-  func appState() {
+  private func appState() {
     switch (permissionGranted, button.title) {
-    case (false, "Enable and Scan"):
-      button.title = "Enable and Scan"
+    case (false, ButtonText.enableAndScan):
+      button.title = ButtonText.enableAndScan
       askPermission()
-    case (true, "Scanning..."):
+    case (true, ButtonText.scanning):
       checkSizeOfCache()
     case (true, stringToTest):
       clearCache()
@@ -55,8 +55,9 @@ class ViewController: NSViewController {
       print("Do nothing")
     }
   }
-  
-  func askPermission() {
+	
+	// MARK: - Helpers
+  private func askPermission() {
       privilegedTask.launchPath = bashPath
       privilegedTask.arguments = calculateCacheSizeTask
       privilegedTask.currentDirectoryPath = Bundle.main.resourcePath
@@ -78,35 +79,34 @@ class ViewController: NSViewController {
       backgroundImage.isHidden = false
       progress.startAnimation(self)
       button.isEnabled = false
-      setButton(button, title: "Scanning...")
+			NSButton.setButton(button, title: ButtonText.scanning)
+      //setButton(button, title: ButtonText.scanning)
       mainImage.cell?.image = #imageLiteral(resourceName: "closedBox")
-      DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1) ) {
+      DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
         self.button.isEnabled = true
         self.checkSizeOfCache()
       }
   }
   
-  func checkSizeOfCache() {
+  private func checkSizeOfCache() {
     progress.stopAnimation(self)
     let readHandle = privilegedTask.outputFileHandle
     let outputData = readHandle?.readDataToEndOfFile()
     let outputString = String(data: outputData!, encoding: .utf8)
     let stringArray = outputString?.components(separatedBy: "/")
     guard let stringToDispaly = stringArray?[0] else { return }
-    
-    print("stringToDispaly", stringToDispaly)
-    
+		
     if stringToDispaly.trim() == "0B" || stringToDispaly == "" {
       finalUIState()
     } else {
       stringToTest = "Clear \(stringToDispaly.trim())B"
-      setButton(button, title: "Clear \(stringToDispaly.trim())B")
+			NSButton.setButton(button, title: "Clear \(stringToDispaly.trim())B")
       mainImage.cell?.image = #imageLiteral(resourceName: "boxWithSketch")
       notificationLabel.isHidden = false
     }
   }
   
-  func clearCache() {
+  private func clearCache() {
     privilegedTask.launchPath = bashPath
     privilegedTask.arguments = clearCacheTask
     privilegedTask.currentDirectoryPath = Bundle.main.resourcePath
@@ -124,7 +124,7 @@ class ViewController: NSViewController {
     finalUIState()
   }
   
-  func finalUIState(){
+  private func finalUIState(){
     mainImage.cell?.image = #imageLiteral(resourceName: "openBox")
     button.isHidden = true
     cacheCleared.isHidden = false
@@ -134,27 +134,5 @@ class ViewController: NSViewController {
   // MARK: - Actions
   @IBAction func buttonPressed(_ sender: NSButton) {
     appState()
-  }
-  
-  // MARL: - Helpers
-  func setButton(_ button: NSButton, title: String) {
-    button.title = title
-    button.cornerRadius = 3.0
-    button.backgroundColor = NSColor(red:1.0, green:0.70, blue:0.0, alpha:1.00)
-    let textColor =  NSColor(red:1.0, green:1.0, blue:1.0, alpha:1.00)
-    
-    let style = NSMutableParagraphStyle()
-    style.alignment = .center
-    
-    guard let font = NSFont(name: "San Francisco Display Semibold", size: 14) else {
-      return
-    }
-    
-    let attributes = [NSAttributedStringKey.foregroundColor: textColor,
-                      NSAttributedStringKey.font: font,
-                      NSAttributedStringKey.paragraphStyle: style] as [NSAttributedStringKey : Any]
-    
-    button.attributedTitle = NSAttributedString(string: title, attributes: attributes)
-      //NSAttributedString(string: title, attributes: attributes)
   }
 }

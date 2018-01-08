@@ -32,6 +32,7 @@ final class ViewController: NSViewController {
     backgroundImage.isHidden = true
     cacheCleared.isHidden = true
     notificationLabel.isHidden = true
+		
   }
   override func viewWillAppear() {
     super.viewWillAppear()
@@ -39,7 +40,7 @@ final class ViewController: NSViewController {
     view.window?.backgroundColor = NSColor(red:0.07, green:0.04, blue:0.20, alpha:1.00)
     view.window?.contentView?.setFrameSize(CGSize(width: (view.window?.contentView?.frame.width)!,
                                                   height: (view.window?.contentView?.frame.height)! + 20))
-    NSButton.setButton(button, title: ButtonText.enableAndScan)
+		NSButton.setButton(button, title: ButtonText.enableAndScan)
   }
   
   private func appState() {

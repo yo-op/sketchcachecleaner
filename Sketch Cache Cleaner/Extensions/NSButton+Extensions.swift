@@ -9,20 +9,9 @@
 import Cocoa
 
 extension NSButton {
-	@IBInspectable var cornerRadius: CGFloat {
-		get {
-			return layer!.cornerRadius
-		}
-		set {
-			layer?.cornerRadius = newValue
-			layer?.masksToBounds = newValue > 0
-		}
-	}
-	
 	@discardableResult
 	static func setButton(_ button: NSButton, title: String)  -> NSButton {
 		button.title = title
-		button.cornerRadius = 3.0
 		button.backgroundColor = NSColor(red:1.0, green:0.70, blue:0.0, alpha:1.00)
 		let textColor =  NSColor(red:1.0, green:1.0, blue:1.0, alpha:1.00)
 		
@@ -35,6 +24,8 @@ extension NSButton {
 											NSAttributedStringKey.paragraphStyle: style] as [NSAttributedStringKey : Any]
 		
 		button.attributedTitle = NSAttributedString(string: title, attributes: attributes)
+		button.layer?.cornerRadius = 3.0
+		button.layer?.masksToBounds = true
 		return button
 	}
 }

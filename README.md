@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/yo-op/sketchcachecleaner.svg?branch=master)](https://travis-ci.org/yo-op/sketchcachecleaner)
 [![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](https://github.com/yo-op/sketchcachecleaner)
+[![Version](https://img.shields.io/badge/version-1.0.2-blue.svg)](https://github.com/yo-op/sketchcachecleaner)
 
 ![Sketch Cache Cleaner](https://image.ibb.co/mHOoea/cleaner.png)
 

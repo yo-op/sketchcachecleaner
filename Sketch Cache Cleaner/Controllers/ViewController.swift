@@ -13,7 +13,12 @@ final class ViewController: NSViewController {
   // MARK: - Properties
   @IBOutlet var backgroundView: NSView!
   @IBOutlet weak var button: NSButton!
-  @IBOutlet weak var mainImage: NSImageView!
+
+	@IBOutlet weak var shareToTweeterButton: NSButton!
+
+	@IBOutlet weak var shareToFaceBookButton: NSButton!
+
+	@IBOutlet weak var mainImage: NSImageView!
   @IBOutlet weak var backgroundImage: NSImageView!
   @IBOutlet weak var cacheCleared: NSImageView!
   @IBOutlet weak var notificationLabel: NSTextField!
@@ -32,7 +37,8 @@ final class ViewController: NSViewController {
     backgroundImage.isHidden = true
     cacheCleared.isHidden = true
     notificationLabel.isHidden = true
-		
+		shareToTweeterButton.isHidden = true
+		shareToFaceBookButton.isHidden = true
   }
   override func viewWillAppear() {
     super.viewWillAppear()
@@ -66,7 +72,6 @@ final class ViewController: NSViewController {
       let err = privilegedTask.launch()
       if err != errAuthorizationSuccess {
         if err == errAuthorizationCanceled {
-          print("User cancelled", permissionGranted)
           permissionGranted = false
           return
         } else {
@@ -81,7 +86,6 @@ final class ViewController: NSViewController {
       progress.startAnimation(self)
       button.isEnabled = false
 			NSButton.setButton(button, title: ButtonText.scanning)
-      //setButton(button, title: ButtonText.scanning)
       mainImage.cell?.image = #imageLiteral(resourceName: "closedBox")
       DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
         self.button.isEnabled = true
@@ -130,10 +134,21 @@ final class ViewController: NSViewController {
     button.isHidden = true
     cacheCleared.isHidden = false
     notificationLabel.isHidden = true
+		shareToTweeterButton.isHidden = false
+		shareToFaceBookButton.isHidden = false
   }
   
   // MARK: - Actions
   @IBAction func buttonPressed(_ sender: NSButton) {
     appState()
   }
+
+	@IBAction func shareToTweeterDidPress(_ sender: NSButton) {
+
+	}
+
+	@IBAction func shareToFacebookrDidPress(_ sender: NSButton) {
+		
+	}
+
 }

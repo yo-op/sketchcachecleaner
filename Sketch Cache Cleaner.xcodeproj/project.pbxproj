@@ -86,6 +86,7 @@
 		CE25F7D51E490FA00049CF23 /* Sketch Cache Cleaner */ = {
 			isa = PBXGroup;
 			children = (
+				FCF92586201E4F4C00E6484A /* ViewModels */,
 				FC4D46D41FE92CE00012B681 /* Views */,
 				CEE6384A1F78279F00C908C5 /* Controllers */,
 				CE25F7DA1E490FA00049CF23 /* Assets.xcassets */,
@@ -155,6 +156,13 @@
 				FC4D46D51FE92E7B0012B681 /* MainWindow.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FCF92586201E4F4C00E6484A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

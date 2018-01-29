@@ -1,6 +1,3 @@
-
-# Created by https://www.gitignore.io/api/macos,xcode,swift,objective-c
-
 ### macOS ###
 *.DS_Store
 .AppleDouble
@@ -149,4 +146,10 @@ build
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
-# End of https://www.gitignore.io/api/macos,xcode,swift,objective-c
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history

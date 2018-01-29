@@ -1,4 +1,3 @@
-
 //
 //  StringExtensions.swift
 //  Sketch Cache Cleaner

@@ -8,29 +8,25 @@
 
 import Cocoa
 
-final class ViewController: NSViewController {
-  
-  // MARK: - Properties
+final class MainViewController: NSViewController {
+  // MARK: - IBOutlets
   @IBOutlet var backgroundView: NSView!
   @IBOutlet weak var button: NSButton!
-
 	@IBOutlet weak var shareToTweeterButton: NSButton!
-
 	@IBOutlet weak var shareToFaceBookButton: NSButton!
-
 	@IBOutlet weak var mainImage: NSImageView!
   @IBOutlet weak var backgroundImage: NSImageView!
   @IBOutlet weak var cacheCleared: NSImageView!
   @IBOutlet weak var notificationLabel: NSTextField!
   @IBOutlet weak var sketchLabel: NSTextField!
   @IBOutlet weak var progress: NSProgressIndicator!
+	// MARK: - Instance Properties
   private var permissionGranted = false
   private var stringToTest = ""
   private let privilegedTask = STPrivilegedTask()
   private let bashPath = Environment.bashPath
   private let calculateCacheSizeTask = [Environment.calculateCacheScriptPath]
   private let clearCacheTask = [Environment.clearCacheScriptPath]
-  
   // MARK: - ViewController lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -43,12 +39,11 @@ final class ViewController: NSViewController {
   override func viewWillAppear() {
     super.viewWillAppear()
     view.window?.titlebarAppearsTransparent = true
-    view.window?.backgroundColor = NSColor(red:0.07, green:0.04, blue:0.20, alpha:1.00)
+    view.window?.backgroundColor = NSColor(red: 0.07, green: 0.04, blue: 0.20, alpha: 1.00)
     view.window?.contentView?.setFrameSize(CGSize(width: (view.window?.contentView?.frame.width)!,
                                                   height: (view.window?.contentView?.frame.height)! + 20))
 		NSButton.setButton(button, title: ButtonText.enableAndScan)
   }
-  
   private func appState() {
     switch (permissionGranted, button.title) {
     case (false, ButtonText.enableAndScan):
@@ -62,13 +57,11 @@ final class ViewController: NSViewController {
       print("Do nothing")
     }
   }
-	
 	// MARK: - Helpers
   private func askPermission() {
       privilegedTask.launchPath = bashPath
       privilegedTask.arguments = calculateCacheSizeTask
       privilegedTask.currentDirectoryPath = Bundle.main.resourcePath
-  
       let err = privilegedTask.launch()
       if err != errAuthorizationSuccess {
         if err == errAuthorizationCanceled {
@@ -79,7 +72,6 @@ final class ViewController: NSViewController {
           // For error codes, see http://www.opensource.apple.com/source/libsecurity_authorization/libsecurity_authorization-36329/lib/Authorization.h
         }
       }
-      
       privilegedTask.waitUntilExit()
       permissionGranted = true
       backgroundImage.isHidden = false
@@ -92,7 +84,6 @@ final class ViewController: NSViewController {
         self.checkSizeOfCache()
       }
   }
-  
   private func checkSizeOfCache() {
     progress.stopAnimation(self)
     let readHandle = privilegedTask.outputFileHandle
@@ -100,7 +91,6 @@ final class ViewController: NSViewController {
     let outputString = String(data: outputData!, encoding: .utf8)
     let stringArray = outputString?.components(separatedBy: "/")
     guard let stringToDispaly = stringArray?[0] else { return }
-		
     if stringToDispaly.trim() == "0B" || stringToDispaly == "" {
       finalUIState()
     } else {
@@ -110,12 +100,10 @@ final class ViewController: NSViewController {
       notificationLabel.isHidden = false
     }
   }
-  
   private func clearCache() {
     privilegedTask.launchPath = bashPath
     privilegedTask.arguments = clearCacheTask
     privilegedTask.currentDirectoryPath = Bundle.main.resourcePath
-    
     let err = privilegedTask.launch()
     if err != errAuthorizationSuccess {
       if err == errAuthorizationCanceled {
@@ -128,8 +116,7 @@ final class ViewController: NSViewController {
     privilegedTask.waitUntilExit()
     finalUIState()
   }
-  
-  private func finalUIState(){
+  private func finalUIState() {
     mainImage.cell?.image = #imageLiteral(resourceName: "openBox")
     button.isHidden = true
     cacheCleared.isHidden = false
@@ -137,7 +124,6 @@ final class ViewController: NSViewController {
 		shareToTweeterButton.isHidden = false
 		shareToFaceBookButton.isHidden = false
   }
-  
   // MARK: - Actions
   @IBAction func buttonPressed(_ sender: NSButton) {
     appState()
@@ -148,7 +134,6 @@ final class ViewController: NSViewController {
 	}
 
 	@IBAction func shareToFacebookrDidPress(_ sender: NSButton) {
-		
 	}
 
 }

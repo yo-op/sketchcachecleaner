@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		035AF2A11F0585FB003CD85B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035AF2A01F0585FB003CD85B /* ViewController.swift */; };
+		035AF2A11F0585FB003CD85B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035AF2A01F0585FB003CD85B /* MainViewController.swift */; };
 		038FCAE91F058A2100755E96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038FCAE81F058A2100755E96 /* Main.storyboard */; };
 		CE109E5D1F05A01400C4BF25 /* SanFranciscoDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE109E5C1F05A01400C4BF25 /* SanFranciscoDisplay-Semibold.otf */; };
 		CE25F7D71E490FA00049CF23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25F7D61E490FA00049CF23 /* AppDelegate.swift */; };
@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		035AF2A01F0585FB003CD85B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Sketch Cache Cleaner/Controllers/ViewController.swift"; sourceTree = SOURCE_ROOT; };
+		035AF2A01F0585FB003CD85B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "Sketch Cache Cleaner/Controllers/MainViewController.swift"; sourceTree = SOURCE_ROOT; };
 		038FCAE81F058A2100755E96 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE109E5C1F05A01400C4BF25 /* SanFranciscoDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoDisplay-Semibold.otf"; sourceTree = "<group>"; };
 		CE25F7D31E490FA00049CF23 /* Sketch Cache Cleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sketch Cache Cleaner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +145,7 @@
 		CEE6384A1F78279F00C908C5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				035AF2A01F0585FB003CD85B /* ViewController.swift */,
+				035AF2A01F0585FB003CD85B /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -175,6 +175,7 @@
 				CE25F7CF1E490FA00049CF23 /* Sources */,
 				CE25F7D01E490FA00049CF23 /* Frameworks */,
 				CE25F7D11E490FA00049CF23 /* Resources */,
+				FCB22D27201FC2570054F43E /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -237,6 +238,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FCB22D27201FC2570054F43E /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE25F7CF1E490FA00049CF23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -244,7 +262,7 @@
 			files = (
 				FC4D46D11FE92C940012B681 /* NSButton+Extensions.swift in Sources */,
 				FC4D46D61FE92E7B0012B681 /* MainWindow.swift in Sources */,
-				035AF2A11F0585FB003CD85B /* ViewController.swift in Sources */,
+				035AF2A11F0585FB003CD85B /* MainViewController.swift in Sources */,
 				CEA190B11F02FE3B00C9F30A /* Environment.swift in Sources */,
 				FC4D46D31FE92CBA0012B681 /* String+Extensions.swift in Sources */,
 				FC4D46CF1FE92C770012B681 /* NSView+Extensions.swift in Sources */,

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -187,7 +188,7 @@
                                     <constraint firstAttribute="height" constant="38" id="fTL-Ex-IVH"/>
                                     <constraint firstAttribute="width" constant="130" id="yU4-rq-uIN"/>
                                 </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="tweeter_button" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Ck5-JY-zrJ">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="tweeterButton" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Ck5-JY-zrJ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system" size="14"/>
                                 </buttonCell>
@@ -206,7 +207,7 @@
                                     <constraint firstAttribute="width" constant="130" id="GYu-Kz-OHY"/>
                                     <constraint firstAttribute="height" constant="38" id="VkR-Uz-Kt1"/>
                                 </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="facebook_button" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="uCB-qN-qM1">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="facebookButton" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="uCB-qN-qM1">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system" size="14"/>
                                 </buttonCell>
@@ -266,7 +267,7 @@
     </scenes>
     <resources>
         <image name="bg" width="300" height="400"/>
-        <image name="facebook_button" width="130" height="38"/>
+        <image name="facebookButton" width="130" height="38"/>
         <image name="imageCell:fTS-wT-ana:image" width="192" height="16">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGTE1YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEQcI
@@ -552,6 +553,6 @@ AAAAAAAAQKw
 </mutableData>
         </image>
         <image name="start" width="182" height="54"/>
-        <image name="tweeter_button" width="130" height="38"/>
+        <image name="tweeterButton" width="130" height="38"/>
     </resources>
 </document>

@@ -9,5 +9,5 @@
 import Cocoa
 
 final class MainWindow: NSWindow {
-	//
+	// Keep this class
 }

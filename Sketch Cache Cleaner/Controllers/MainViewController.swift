@@ -7,8 +7,10 @@
 //
 
 import Cocoa
+import Social
 
 final class MainViewController: NSViewController {
+	// MARK: - Injectons
   // MARK: - IBOutlets
   @IBOutlet var backgroundView: NSView!
   @IBOutlet weak var button: NSButton!
@@ -30,20 +32,27 @@ final class MainViewController: NSViewController {
   // MARK: - ViewController lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    backgroundImage.isHidden = true
-    cacheCleared.isHidden = true
-    notificationLabel.isHidden = true
-		shareToTweeterButton.isHidden = true
-		shareToFaceBookButton.isHidden = true
+		configureInitialVCState()
   }
   override func viewWillAppear() {
     super.viewWillAppear()
-    view.window?.titlebarAppearsTransparent = true
-    view.window?.backgroundColor = NSColor(red: 0.07, green: 0.04, blue: 0.20, alpha: 1.00)
-    view.window?.contentView?.setFrameSize(CGSize(width: (view.window?.contentView?.frame.width)!,
-                                                  height: (view.window?.contentView?.frame.height)! + 20))
-		NSButton.setButton(button, title: ButtonText.enableAndScan)
+		additionalVCConfigure()
   }
+	// MARK: - Initial state
+	private func configureInitialVCState() {
+		backgroundImage.isHidden = true
+		cacheCleared.isHidden = true
+		notificationLabel.isHidden = true
+		shareToTweeterButton.isHidden = true
+		shareToFaceBookButton.isHidden = true
+	}
+	private func additionalVCConfigure() {
+		view.window?.titlebarAppearsTransparent = true
+		view.window?.backgroundColor = NSColor(red: 0.07, green: 0.04, blue: 0.20, alpha: 1.00)
+		view.window?.contentView?.setFrameSize(CGSize(width: (view.window?.contentView?.frame.width)!,
+																									height: (view.window?.contentView?.frame.height)! + 20))
+		NSButton.setButton(button, title: ButtonText.enableAndScan)
+	}
   private func appState() {
     switch (permissionGranted, button.title) {
     case (false, ButtonText.enableAndScan):
@@ -134,6 +143,8 @@ final class MainViewController: NSViewController {
 	}
 
 	@IBAction func shareToFacebookrDidPress(_ sender: NSButton) {
-	}
 
+
+
+	}
 }

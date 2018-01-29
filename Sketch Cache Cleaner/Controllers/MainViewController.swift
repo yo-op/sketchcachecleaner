@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import Social
 
 final class MainViewController: NSViewController {
 	// MARK: - Injectons
@@ -139,7 +138,12 @@ final class MainViewController: NSViewController {
   }
 
 	@IBAction func shareToTweeterDidPress(_ sender: NSButton) {
-
+		let tweet = "https://twitter.com/intent/tweet?text=Just%20cleared%20" +
+								"\(stringToTest)%20of%20space%20on%20my%20disk%20thanks%20" +
+								"to%20Sketch%20Cache%20Cleaner!%20Check%20it%20out:" +
+								"%20https%3A%2F%2Fyo-op.github.io%2Fsketchcachecleaner%2F%0A"
+		let url = URL(string: tweet)!
+		NSWorkspace.shared.open(url)
 	}
 
 	@IBAction func shareToFacebookrDidPress(_ sender: NSButton) {

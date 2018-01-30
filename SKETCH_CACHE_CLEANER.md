@@ -5,9 +5,9 @@ Sketch Cache Cleaner is an app that deletes hidden Sketch history files that can
 ---------------------------------------------
 
 1. [Warning](#Warning)
-2. [System Requirements](#System Requirements)
-3. [What's new in the latest verison?](#What's new in the latest verison?)
-4. [Previous changes](#Previous changes)
+2. [System Requirements](#System)
+3. [What's new in the latest verison?](#What'snew)
+4. [Previous changes](#Previous)
 5. [Tips](#Tips)
 6. [Authors](#Authors)
 7. [License](#License)
@@ -37,7 +37,7 @@ The app will remove all files in folder: /.DocumentRevisions-V100/
 
 ### What's new in the latest verison?
 
-**v 1.0.3** (not release yet)
+**v 1.0.3** (not released yet)
 
 - Add social sharing
 - Code refactor
@@ -59,7 +59,7 @@ The app will remove all files in folder: /.DocumentRevisions-V100/
 
 ————————
 
-**v 1.0.0**
+**v 1.0.0 **
 
 Initial release
 

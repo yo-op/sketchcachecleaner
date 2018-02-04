@@ -10,9 +10,4 @@ import Cocoa
 import Social
 
 class MainViewModel {
-
-
-
-
-
 }

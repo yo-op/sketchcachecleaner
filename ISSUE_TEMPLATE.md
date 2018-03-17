@@ -1,5 +1,3 @@
-### Name and description
-
-### Motivation for inclusion
-
-### Example of use
+### Expected behaviour
+### Actual behaviour
+### Steps to reproduce the behaviour

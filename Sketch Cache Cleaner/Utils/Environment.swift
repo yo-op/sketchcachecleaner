@@ -12,4 +12,5 @@ enum Environment {
   static let bashPath = "/bin/sh"
   static let calculateCacheScriptPath = "calculate_cache_size.sh"
   static let clearCacheScriptPath = "clear_cache.sh"
+	static let webPage = "https://yo-op.github.io/sketchcachecleaner/"
 }

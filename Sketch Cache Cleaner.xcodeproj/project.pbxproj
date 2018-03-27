@@ -22,8 +22,8 @@
 		FC4D46D11FE92C940012B681 /* NSButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4D46D01FE92C940012B681 /* NSButton+Extensions.swift */; };
 		FC4D46D31FE92CBA0012B681 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4D46D21FE92CBA0012B681 /* String+Extensions.swift */; };
 		FC4D46D61FE92E7B0012B681 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4D46D51FE92E7B0012B681 /* MainWindow.swift */; };
-		FCB22D29201FC4780054F43E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB22D28201FC4780054F43E /* MainViewModel.swift */; };
-		FCB22D2C201FC4F40054F43E /* ShareText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB22D2B201FC4F40054F43E /* ShareText.swift */; };
+		FC81FE04206A80CB00BA1282 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81FE03206A80CB00BA1282 /* Colors.swift */; };
+		FCB22D2C201FC4F40054F43E /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB22D2B201FC4F40054F43E /* Share.swift */; };
 		FCBCBF9D200385B3008CC9CA /* ButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBCBF9C200385B3008CC9CA /* ButtonText.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,8 +47,8 @@
 		FC4D46D01FE92C940012B681 /* NSButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSButton+Extensions.swift"; sourceTree = "<group>"; };
 		FC4D46D21FE92CBA0012B681 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FC4D46D51FE92E7B0012B681 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
-		FCB22D28201FC4780054F43E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		FCB22D2B201FC4F40054F43E /* ShareText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareText.swift; sourceTree = "<group>"; };
+		FC81FE03206A80CB00BA1282 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		FCB22D2B201FC4F40054F43E /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		FCBCBF9C200385B3008CC9CA /* ButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +97,6 @@
 				038FCAEA1F058A5800755E96 /* Storyboards & Xibs */,
 				CE25F7EE1E4914930049CF23 /* Supporting Files */,
 				CE25F7E71E490FDB0049CF23 /* Utils */,
-				FCF92586201E4F4C00E6484A /* ViewModels */,
 				FC4D46D41FE92CE00012B681 /* Views */,
 			);
 			path = "Sketch Cache Cleaner";
@@ -107,8 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				FCBCBF9C200385B3008CC9CA /* ButtonText.swift */,
+				FC81FE03206A80CB00BA1282 /* Colors.swift */,
 				CEA190B01F02FE3B00C9F30A /* Environment.swift */,
-				FCB22D2B201FC4F40054F43E /* ShareText.swift */,
+				FCB22D2B201FC4F40054F43E /* Share.swift */,
 				CE25F7EF1E4915190049CF23 /* Sketch Cache Cleaner-Bridging-Header.h */,
 				CE25F7F11E4915190049CF23 /* STPrivilegedTask.h */,
 				CE25F7F01E4915190049CF23 /* STPrivilegedTask.m */,
@@ -161,14 +161,6 @@
 				FC4D46D51FE92E7B0012B681 /* MainWindow.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		FCF92586201E4F4C00E6484A /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				FCB22D28201FC4780054F43E /* MainViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,16 +260,16 @@
 			files = (
 				FC4D46D11FE92C940012B681 /* NSButton+Extensions.swift in Sources */,
 				FC4D46D61FE92E7B0012B681 /* MainWindow.swift in Sources */,
-				FCB22D2C201FC4F40054F43E /* ShareText.swift in Sources */,
+				FCB22D2C201FC4F40054F43E /* Share.swift in Sources */,
 				035AF2A11F0585FB003CD85B /* MainViewController.swift in Sources */,
 				CEA190B11F02FE3B00C9F30A /* Environment.swift in Sources */,
 				FC4D46D31FE92CBA0012B681 /* String+Extensions.swift in Sources */,
 				FC4D46CF1FE92C770012B681 /* NSView+Extensions.swift in Sources */,
 				FCBCBF9D200385B3008CC9CA /* ButtonText.swift in Sources */,
+				FC81FE04206A80CB00BA1282 /* Colors.swift in Sources */,
 				FC4D46CD1FE92BE10012B681 /* NSFont+Extensions.swift in Sources */,
 				CE25F7D71E490FA00049CF23 /* AppDelegate.swift in Sources */,
 				CE25F7F21E4915190049CF23 /* STPrivilegedTask.m in Sources */,
-				FCB22D29201FC4780054F43E /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

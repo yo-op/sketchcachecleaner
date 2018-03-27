@@ -1,5 +1,5 @@
 //
-//  ShareText.swift
+//  Share.swift
 //  Sketch Cache Cleaner
 //
 //  Created by Sasha Prokhorenko on 29.01.18.

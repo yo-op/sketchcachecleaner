@@ -6,4 +6,6 @@
 //  Copyright © 2018 Sasha Prokhorenko. All rights reserved.
 //
 
-import Foundation
+enum Colors {
+	static let background = NSColor(red: 0.07, green: 0.04, blue: 0.20, alpha: 1.00)
+}

@@ -9,8 +9,9 @@
 import Cocoa
 
 final class MainViewController: NSViewController {
-	// MARK: - Injectons
+
   // MARK: - IBOutlets
+
   @IBOutlet var backgroundView: NSView!
   @IBOutlet weak var button: NSButton!
 	@IBOutlet weak var shareToTweeterButton: NSButton!
@@ -21,23 +22,30 @@ final class MainViewController: NSViewController {
   @IBOutlet weak var notificationLabel: NSTextField!
   @IBOutlet weak var sketchLabel: NSTextField!
   @IBOutlet weak var progress: NSProgressIndicator!
+
 	// MARK: - Instance Properties
+
   private var permissionGranted = false
   private var stringToTest = ""
   private let privilegedTask = STPrivilegedTask()
   private let bashPath = Environment.bashPath
   private let calculateCacheSizeTask = [Environment.calculateCacheScriptPath]
   private let clearCacheTask = [Environment.clearCacheScriptPath]
+
   // MARK: - ViewController lifecycle
+
   override func viewDidLoad() {
     super.viewDidLoad()
 		configureInitialVCState()
   }
+
   override func viewWillAppear() {
     super.viewWillAppear()
 		additionalVCConfigure()
   }
+
 	// MARK: - Initial state
+
 	private func configureInitialVCState() {
 		backgroundImage.isHidden = true
 		cacheCleared.isHidden = true
@@ -47,7 +55,7 @@ final class MainViewController: NSViewController {
 	}
 	private func additionalVCConfigure() {
 		view.window?.titlebarAppearsTransparent = true
-		view.window?.backgroundColor = NSColor(red: 0.07, green: 0.04, blue: 0.20, alpha: 1.00)
+		view.window?.backgroundColor = Colors.background
 		view.window?.contentView?.setFrameSize(CGSize(width: (view.window?.contentView?.frame.width)!,
 																									height: (view.window?.contentView?.frame.height)! + 20))
 		NSButton.setButton(button, title: ButtonText.enableAndScan)
@@ -62,10 +70,12 @@ final class MainViewController: NSViewController {
     case (true, stringToTest):
       clearCache()
     default:
-      print("Do nothing")
+      break
     }
   }
+	
 	// MARK: - Helpers
+
   private func askPermission() {
       privilegedTask.launchPath = bashPath
       privilegedTask.arguments = calculateCacheSizeTask
@@ -132,28 +142,18 @@ final class MainViewController: NSViewController {
 		shareToTweeterButton.isHidden = false
 		shareToFaceBookButton.isHidden = false
   }
+
   // MARK: - Actions
+
   @IBAction func buttonPressed(_ sender: NSButton) {
     appState()
   }
 
 	@IBAction func shareToTweeterDidPress(_ sender: NSButton) {
-		let tweet = "https://twitter.com/intent/tweet?text=Just%20cleared%20" +
-								"\(stringToTest.urlEncode())%20of%20space%20on%20my%20disk%20thanks%20" +
-								"to%20Sketch%20Cache%20Cleaner!%20Check%20it%20out:%20" +
-								"https%3A%2F%2Fyo-op.github.io%2Fsketchcachecleaner%2F%0A"
-		let url = URL(string: tweet)!
-		NSWorkspace.shared.open(url)
+		NSWorkspace.shared.open(Share.twitterMessage(stringToTest))
 	}
 
 	@IBAction func shareToFacebookrDidPress(_ sender: NSButton) {
-		let fb = "https://www.facebook.com/dialog/share?%20app_id=1778148252492778" +
-		"&href=https%3A%2F%2Fyo-op.github.io%2Fsketchcachecleaner%2F%0A" +
-		"&quote=Just%20cleared%20" +
-		"\(stringToTest.urlEncode())%20of%20space%20on%20my%20disk%20thanks%20" +
-		"to%20Sketch%20Cache%20Cleaner!%20Check%20it%20out:%20" +
-		"&redirect_uri=https%3A%2F%2F.facebook.com"
-		let url = URL(string: fb)!
-		NSWorkspace.shared.open(url)
+		NSWorkspace.shared.open(Share.facebookMessage(stringToTest))
 	}
 }

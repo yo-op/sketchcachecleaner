@@ -1,7 +1,7 @@
 
 # CHANGELOG
 
-**v 1.0.3** (not released yet)
+**v 1.0.3**
 
 - Add social sharing
 - Code refactor

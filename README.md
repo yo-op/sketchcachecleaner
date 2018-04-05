@@ -4,6 +4,7 @@
 [![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](https://github.com/yo-op/sketchcachecleaner)
 [![Version](https://img.shields.io/badge/version-1.0.3-blue.svg)](https://github.com/yo-op/sketchcachecleaner)
 
+![Sketch Cache Cleaner on Producthunt](https://image.ibb.co/fJSxcH/product.png)
 ![Sketch Cache Cleaner](https://image.ibb.co/mHOoea/cleaner.png)
 
 # Sketch Cache Cleaner 

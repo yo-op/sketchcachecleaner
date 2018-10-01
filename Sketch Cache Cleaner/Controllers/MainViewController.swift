@@ -73,7 +73,6 @@ final class MainViewController: NSViewController {
       break
     }
   }
-	
 	// MARK: - Helpers
 
   private func askPermission() {

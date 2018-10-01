@@ -18,9 +18,9 @@ extension NSButton {
 		style.alignment = .center
 
 		let font = NSFont.mainFont(ofSize: 14)
-		let attributes = [NSAttributedStringKey.foregroundColor: textColor,
-											NSAttributedStringKey.font: font,
-											NSAttributedStringKey.paragraphStyle: style] as [NSAttributedStringKey: Any]
+    let attributes = [NSAttributedString.Key.foregroundColor: textColor,
+                      NSAttributedString.Key.font: font,
+                      NSAttributedString.Key.paragraphStyle: style] as [NSAttributedString.Key: Any]
 		button.attributedTitle = NSAttributedString(string: title, attributes: attributes)
 		button.layer?.cornerRadius = 3.0
 		button.layer?.masksToBounds = true

@@ -204,7 +204,7 @@
 			};
 			buildConfigurationList = CE25F7CE1E490FA00049CF23 /* Build configuration list for PBXProject "Sketch Cache Cleaner" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

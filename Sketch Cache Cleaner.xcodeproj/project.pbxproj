@@ -197,14 +197,14 @@
 					CE25F7D21E490FA00049CF23 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = GW82A8W73Z;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = CE25F7CE1E490FA00049CF23 /* Build configuration list for PBXProject "Sketch Cache Cleaner" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -398,8 +398,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sketch Cache Cleaner/Utils/Sketch Cache Cleaner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -417,8 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.minikin.Sketch-Cache-Cleaner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sketch Cache Cleaner/Utils/Sketch Cache Cleaner-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

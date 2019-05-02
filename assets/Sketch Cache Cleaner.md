@@ -1,4 +1,4 @@
-# Sketch Cache Cleaner
+#Sketch Cache Cleaner
 
 ![Sketch Cache Cleaner](https://image.ibb.co/mHOoea/cleaner.png)
 
@@ -9,13 +9,16 @@ Sketch Cache Cleaner is an app that deletes hidden Sketch history files that can
 ---
 
 1. [Warning](#warning)
-2. [System Requirements](#system-requirements)
-3. [Changelog](#changelog)
-4. [Tips](#tips)
-5. [Authors](#authors)
-6. [License](#license)
 
----
+2. [System Requirements](#system-requirements)
+
+3. [Changelog](#changelog)
+
+4. [Tips](#tips)
+
+5. [Authors](#authors)
+
+6. [License](#license)
 
 ## Warning
 
@@ -24,16 +27,17 @@ The app idea inspired by two blog posts: [How Sketch took over 200GB of our MacB
 Please, read them in case you want to know how it works.
 
 If your **workflow** relies on **automatic versioning** by macOS
+
 (Time Machine etc.) - **DO NOT USE THIS APP!**
 
 The app will remove all files in folder: `/.DocumentRevisions-V100/`
 
----
-
 ## System Requirements
 
 - macOS 10.11+
+
 - Xcode 10.0+
+
 - Swift 4.2+
 
 ---
@@ -51,6 +55,7 @@ The app will remove all files in folder: `/.DocumentRevisions-V100/`
 ### Changed
 
 - Build with Xcode 10 and macOS Mojave
+
 - Migrate to Swift 4.2
 
 ## [1.0.3] - 2018-03-27
@@ -62,6 +67,7 @@ The app will remove all files in folder: `/.DocumentRevisions-V100/`
 ### Changed
 
 - Code refactor
+
 - Build with new Xcode's build system
 
 ## [1.0.2] - 2017-09-24
@@ -69,6 +75,7 @@ The app will remove all files in folder: `/.DocumentRevisions-V100/`
 ### Changed
 
 - Update to Swift 4
+
 - Compiled with Xcode 9
 
 ## [1.0.1] - 2017-07-14
@@ -94,6 +101,7 @@ Development: [Sasha Prokhorenko](https://twitter.com/minikin)
 ## Tips
 
 - Use this app wisely.
+
 - Reboot your Mac after app use.
 
 ---

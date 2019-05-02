@@ -1,35 +1,46 @@
+# Changelog
 
-<!--
+All notable changes to this project will be documented in this file.
 
-// Please add your own contribution below inside the Master section, no need to
-// set a version number, that happens during a deploy.
-//
-// These docs are aimed at product people, so please limit technical
-// terminology in here.
-//
-// Things that warrant a CHANGELOG entry:
-//
-//   * New Features
-//   * Bug fixes across releases (not between betas)
-//   * Major dev tool updates
+## [1.0.5] - 2019-05-02
 
--->
+### Changed
 
-### v 1.0.3
+- Migrate to Swift 5
+
+## [1.0.4] - 2018-10-21
+
+### Changed
+
+- Build with Xcode 10 and macOS Mojave
+- Migrate to Swift 4.2
+
+## [1.0.3] - 2018-03-27
+
+### Added
 
 - Add social sharing
+
+### Changed
+
 - Code refactor
 - Build with new Xcode's build system
 
-### v 1.0.2
+## [1.0.2] - 2017-09-24
 
-- Ported to Swift 4
+### Changed
 
-### v 1.0.1
+- Update to Swift 4
+- Compiled with Xcode 9
 
-- fix compatibility issues with 10.11, 10.12beta
+## [1.0.1] - 2017-07-14
 
+### Fixed
 
-### v 1.0.0
+- Fix compatibility issues with 10.11, 10.12beta
 
-Initial release
+## [1.0.0] - 2017-07-11
+
+- Initial release
+
+---

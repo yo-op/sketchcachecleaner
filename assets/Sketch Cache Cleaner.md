@@ -44,6 +44,15 @@ The app will remove all files in folder: `/.DocumentRevisions-V100/`
 
 ## Changelog
 
+## [1.0.6] - 2020-16-01
+
+### Changed
+
+- Add macOS Catalina support
+- Build with Xcode 11
+
+## Changelog
+
 ## [1.0.5] - 2019-05-02
 
 ### Changed

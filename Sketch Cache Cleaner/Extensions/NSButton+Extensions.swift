@@ -17,7 +17,7 @@ extension NSButton {
 		let style = NSMutableParagraphStyle()
 		style.alignment = .center
 
-		let font = NSFont.mainFont(ofSize: 14)
+	let font = NSFont.mainFont(ofSize: 14)
     let attributes = [NSAttributedString.Key.foregroundColor: textColor,
                       NSAttributedString.Key.font: font,
                       NSAttributedString.Key.paragraphStyle: style] as [NSAttributedString.Key: Any]

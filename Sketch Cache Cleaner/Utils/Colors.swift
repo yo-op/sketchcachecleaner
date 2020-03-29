@@ -7,5 +7,5 @@
 //
 
 enum Colors {
-	static let background = NSColor(red: 0.07, green: 0.04, blue: 0.20, alpha: 1.00)
+    static let background = NSColor(red: 0.07, green: 0.04, blue: 0.20, alpha: 1.00)
 }

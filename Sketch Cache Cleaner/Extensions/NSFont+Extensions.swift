@@ -9,14 +9,14 @@
 import Cocoa
 
 extension NSFont {
-	private static func customFont(name: String, size: CGFloat) -> NSFont {
-		let font = NSFont(name: name, size: size)
-		assert(font != nil, "Can't load font: \(name)")
-		return font ?? NSFont.systemFont(ofSize: size)
-	}
-	/// Main font
-	static func mainFont(ofSize size: CGFloat) -> NSFont {
-		return customFont(name: "San Francisco Display Semibold", size: size)
-	}
+    private static func customFont(name: String, size: CGFloat) -> NSFont {
+        let font = NSFont(name: name, size: size)
+        assert(font != nil, "Can't load font: \(name)")
+        return font ?? NSFont.systemFont(ofSize: size)
+    }
 
+    /// Main font
+    static func mainFont(ofSize size: CGFloat) -> NSFont {
+        customFont(name: "San Francisco Display Semibold", size: size)
+    }
 }

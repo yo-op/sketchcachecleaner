@@ -9,6 +9,6 @@
 import Foundation
 
 enum ButtonText {
-	static let enableAndScan = "Enable and Scan"
-	static let scanning = "Scanning..."
+    static let enableAndScan = "Enable and Scan"
+    static let scanning = "Scanning..."
 }

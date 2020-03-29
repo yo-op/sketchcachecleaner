@@ -9,10 +9,11 @@
 import Foundation
 
 extension String {
-	func trim() -> String {
-		return self.trimmingCharacters(in: CharacterSet.whitespaces)
-	}
-	func urlEncode() -> String {
-			return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "none"
-	}
+    func trim() -> String {
+        trimmingCharacters(in: CharacterSet.whitespaces)
+    }
+
+    func urlEncode() -> String {
+        addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "none"
+    }
 }

@@ -7,20 +7,21 @@
 //
 
 import Cocoa
+import Sentry
 
 final class MainViewController: NSViewController {
     // MARK: - IBOutlets
 
-    @IBOutlet var backgroundView: NSView!
-    @IBOutlet var button: NSButton!
-    @IBOutlet var shareToTweeterButton: NSButton!
-    @IBOutlet var shareToFaceBookButton: NSButton!
-    @IBOutlet var mainImage: NSImageView!
-    @IBOutlet var backgroundImage: NSImageView!
-    @IBOutlet var cacheCleared: NSImageView!
-    @IBOutlet var notificationLabel: NSTextField!
-    @IBOutlet var sketchLabel: NSTextField!
-    @IBOutlet var progress: NSProgressIndicator!
+    @IBOutlet private var backgroundView: NSView!
+    @IBOutlet private var button: NSButton!
+    @IBOutlet private var shareToTweeterButton: NSButton!
+    @IBOutlet private var shareToFaceBookButton: NSButton!
+    @IBOutlet private var mainImage: NSImageView!
+    @IBOutlet private var backgroundImage: NSImageView!
+    @IBOutlet private var cacheCleared: NSImageView!
+    @IBOutlet private var notificationLabel: NSTextField!
+    @IBOutlet private var sketchLabel: NSTextField!
+    @IBOutlet private var progress: NSProgressIndicator!
 
     // MARK: - Instance Properties
 
@@ -67,6 +68,7 @@ final class MainViewController: NSViewController {
             button.title = ButtonText.enableAndScan
             askPermission()
         case (true, ButtonText.scanning):
+            Client.shared?.crash()
             checkSizeOfCache()
         case (true, stringToTest):
             clearCache()

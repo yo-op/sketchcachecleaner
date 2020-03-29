@@ -1,10 +1,9 @@
 <h1 align="center">
   <a href="https://github.com/yo-op/sketchcachecleaner">
-   Sketch Cache Cleaner
-  </a>
-    </a>
-    <a href="https://www.producthunt.com/posts/sketch-cache-cleaner">
-    <img src="https://image.ibb.co/mHOoea/cleaner.png" alt="Sketch Cache Cleaner" />
+   Sketch Cache Cleaner</a>
+
+  <a href="https://www.producthunt.com/posts/sketch-cache-cleaner">
+    <img src="https://i.ibb.co/6Dwt4Xk/Product-Hunt.png" alt="Sketch Cache Cleaner on Producthunt" />
   </a>
 </h1>
 
@@ -36,7 +35,8 @@
 
 <p align="center">
   <a href="https://www.producthunt.com/posts/sketch-cache-cleaner">
-    <img src="https://image.ibb.co/fJSxcH/product.png" alt="Sketch Cache Cleaner on Producthunt" />
+    <img src="https://image.ibb.co/mHOoea/cleaner.png" alt="Sketch Cache Cleaner" />
+  </a>
 </p>
 
 ---

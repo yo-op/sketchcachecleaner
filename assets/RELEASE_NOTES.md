@@ -2,8 +2,6 @@
 
 ![Sketch Cache Cleaner](https://image.ibb.co/mHOoea/cleaner.png)
 
-# Sketch Cache Cleaner
-
 Sketch Cache Cleaner is an app that deletes hidden Sketch history files that can take a lot of space on your hard drive and that you would probably never use.
 
 ---
@@ -32,13 +30,26 @@ The app will remove all files in folder: `/.DocumentRevisions-V100/`
 
 ## System Requirements
 
-- macOS 10.11+
-- Xcode 10.0+
-- Swift 4.2+
+- macOS 10.13+
+- Xcode 11.4+
+- Swift 5.2+
 
 ---
 
 ## Changelog
+
+## [1.0.7] - 2020-30-03
+
+- Add macOS Catalina support
+- Bump minimum macOS version to 10.13
+- Build with Xcode 11.4
+
+## [1.0.6] - 2020-16-01
+
+### Changed
+
+- Add macOS Catalina support
+- Build with Xcode 11
 
 ## [1.0.5] - 2019-05-02
 

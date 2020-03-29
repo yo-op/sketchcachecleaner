@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import Sentry
 
 final class MainViewController: NSViewController {
     // MARK: - IBOutlets
@@ -68,7 +67,6 @@ final class MainViewController: NSViewController {
             button.title = ButtonText.enableAndScan
             askPermission()
         case (true, ButtonText.scanning):
-            Client.shared?.crash()
             checkSizeOfCache()
         case (true, stringToTest):
             clearCache()

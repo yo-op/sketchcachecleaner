@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## Changelog
+
+## [1.0.7] - 2020-30-03
+
+- Add macOS Catalina support
+- Bump minimum macOS version to 10.13
+- Build with Xcode 11.4
+
+### Changed
+
 ## [1.0.5] - 2019-05-02
 
 ### Changed

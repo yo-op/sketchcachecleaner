@@ -35,9 +35,9 @@ The app will remove all files in folder: /.DocumentRevisions-V100/
 
 ### System Requirements
 
-- macOS 10.11+
-- Xcode 10.0+
-- Swift 4.2+
+- macOS 10.1+
+- Xcode 11.4+
+- Swift 5.2+
 
 ---
 

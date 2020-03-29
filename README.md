@@ -1,13 +1,43 @@
-# Sketch Cache Cleaner
+<h1 align="center">
+  <a href="https://github.com/yo-op/sketchcachecleaner">
+   Sketch Cache Cleaner
+  </a>
+    </a>
+    <a href="https://www.producthunt.com/posts/sketch-cache-cleaner">
+    <img src="https://image.ibb.co/mHOoea/cleaner.png" alt="Sketch Cache Cleaner" />
+  </a>
+</h1>
 
-[![Build Status](https://travis-ci.org/yo-op/sketchcachecleaner.svg?branch=master)](https://travis-ci.org/yo-op/sketchcachecleaner)
-[![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](https://github.com/yo-op/sketchcachecleaner)
-[![Version](https://img.shields.io/badge/version-1.0.5-blue.svg)](https://github.com/yo-op/sketchcachecleaner)
+<p align="center">
+  Sketch Cache Cleaner is a macOS app that deletes hidden Sketch history files that can take a lot of space on your hard drive and that you would probably never use.
+</p>
 
-[![Sketch Cache Cleaner on Producthunt](https://image.ibb.co/fJSxcH/product.png)](https://www.producthunt.com/posts/sketch-cache-cleaner)
-[![Sketch Cache Cleaner](https://image.ibb.co/mHOoea/cleaner.png)](https://www.producthunt.com/posts/sketch-cache-cleaner)
+<p align="center">
+  <a href="https://github.com/yo-op/sketchcachecleaner/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="Sketch Cache Cleaner is released under the MIT license." />
+  </a>
+  <a href="https://app.bitrise.io/app/44912ccfd2a00896">
+    <img src="https://app.bitrise.io/app/44912ccfd2a00896/status.svg?token=P5lbLK_2kMKGEUIsPD7JZQ" alt="Current Build Status." />
+  </a>
+  <a href="https://github.com/yo-op/sketchcachecleaner/blob/master/CONTRIBUTING.md">
+    <img src="https://img.shields.io/badge/PRs-Welcome-blue.svg" alt="PRs welcome!" />
+  </a>
+</p>
 
-Sketch Cache Cleaner is an app that deletes hidden Sketch history files that can take a lot of space on your hard drive and that you would probably never use.
+<p align="center">
+  <a href="https://github.com/yo-op/sketchcachecleane"r>
+    <img src="https://img.shields.io/badge/platform-macOS-blue.svg" alt="Platform" />
+  </a>
+
+  <a href="https://github.com/yo-op/sketchcachecleaner">
+    <img src="https://img.shields.io/badge/version-1.0.7-blue.svg" alt="Version" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://www.producthunt.com/posts/sketch-cache-cleaner">
+    <img src="https://image.ibb.co/fJSxcH/product.png" alt="Sketch Cache Cleaner on Producthunt" />
+</p>
 
 ---
 
@@ -35,9 +65,9 @@ The app will remove all files in folder: /.DocumentRevisions-V100/
 
 ### System Requirements
 
-- macOS 10.11+
-- Xcode 10.0+
-- Swift 4.2+
+- macOS 10.13+
+- Xcode 11.4+
+- Swift 5.2+
 
 ---
 

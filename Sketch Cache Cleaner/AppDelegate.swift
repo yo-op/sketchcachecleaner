@@ -7,11 +7,18 @@
 //
 
 import Cocoa
+import Sentry
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationDidFinishLaunching(_: Notification) {
+        configureSentry()
+    }
 
-  func applicationDidFinishLaunching(_ aNotification: Notification) {
-    // Insert code here to initialize your application
-  }
+    fileprivate func configureSentry() {
+        do {
+            Client.shared = try Client(dsn: Environment.sentry)
+            try Client.shared?.startCrashHandler()
+        } catch _ {}
+    }
 }

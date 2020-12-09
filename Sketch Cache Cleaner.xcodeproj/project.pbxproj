@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		035AF2A11F0585FB003CD85B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035AF2A01F0585FB003CD85B /* MainViewController.swift */; };
 		038FCAE91F058A2100755E96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038FCAE81F058A2100755E96 /* Main.storyboard */; };
-		2B103B432430DA0B00F87AF2 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 2B103B422430DA0B00F87AF2 /* Sentry */; };
 		CE109E5D1F05A01400C4BF25 /* SanFranciscoDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE109E5C1F05A01400C4BF25 /* SanFranciscoDisplay-Semibold.otf */; };
 		CE25F7D71E490FA00049CF23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25F7D61E490FA00049CF23 /* AppDelegate.swift */; };
 		CE25F7DB1E490FA00049CF23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE25F7DA1E490FA00049CF23 /* Assets.xcassets */; };
@@ -58,7 +57,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B103B432430DA0B00F87AF2 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +181,6 @@
 			);
 			name = "Sketch Cache Cleaner";
 			packageProductDependencies = (
-				2B103B422430DA0B00F87AF2 /* Sentry */,
 			);
 			productName = "Sketch Cache Cleaner";
 			productReference = CE25F7D31E490FA00049CF23 /* Sketch Cache Cleaner.app */;
@@ -196,7 +193,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Sasha Prokhorenko";
 				TargetAttributes = {
 					CE25F7D21E490FA00049CF23 = {
@@ -208,7 +205,7 @@
 				};
 			};
 			buildConfigurationList = CE25F7CE1E490FA00049CF23 /* Build configuration list for PBXProject "Sketch Cache Cleaner" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -217,7 +214,6 @@
 			);
 			mainGroup = CE25F7CA1E490FA00049CF23;
 			packageReferences = (
-				2B103B412430DA0B00F87AF2 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 			);
 			productRefGroup = CE25F7D41E490FA00049CF23 /* Products */;
 			projectDirPath = "";
@@ -308,6 +304,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -365,6 +362,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -400,13 +398,14 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = GW82A8W73Z;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Sketch Cache Cleaner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.0.7;
+				MARKETING_VERSION = 1.0.8b;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.minikin.Sketch-Cache-Cleaner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sketch Cache Cleaner/Utils/Sketch Cache Cleaner-Bridging-Header.h";
@@ -424,13 +423,14 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = GW82A8W73Z;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Sketch Cache Cleaner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.0.7;
+				MARKETING_VERSION = 1.0.8b;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.minikin.Sketch-Cache-Cleaner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sketch Cache Cleaner/Utils/Sketch Cache Cleaner-Bridging-Header.h";
@@ -460,25 +460,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		2B103B412430DA0B00F87AF2 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.5.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2B103B422430DA0B00F87AF2 /* Sentry */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2B103B412430DA0B00F87AF2 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
-			productName = Sentry;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE25F7CB1E490FA00049CF23 /* Project object */;
 }
